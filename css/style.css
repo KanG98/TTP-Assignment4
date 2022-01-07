@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(46, 231, 207);
+
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.content1, .content2{
+    margin: 50px;
+}
+
+.content1 > button, .content2 > button{
+    border: none;
+    border-radius: 50px;
+}
+
+.content1 > button > img, .content2 > button > img{
+    height: 300;
+}
+
+#text, #text2{
+    font-size: 20px;
+    padding-left: 100px;
+
+}
+
+
+
+
+
+
+
