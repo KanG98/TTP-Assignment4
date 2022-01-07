@@ -1,0 +1,57 @@
+<!-- Create an HTML page with a form. It should include inputs for a username, email, and password. Also a submit button.
+In a Javascript file, write a program which checks the following things:
+checks that the password is 12345678
+if the password is incorrect, send an alert message
+Your page should also include an <h1> tag. If the information in the form is correct, have Javascript change the text in the <h1>.HTML page. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const userInfo = {
+            username: "",
+            email: "",
+            password: "12345678"
+        }
+        
+        function submit(){
+            let usernameElm = document.getElementById("username")
+            let emailElm = document.getElementById("email")
+            let passwordElm = document.getElementById("password")
+            userInfo.username = usernameElm.value
+            userInfo.email = usernameElm.value
+
+            if(passwordElm.value !== userInfo.password){
+                alert("wrong password")
+            }
+            else{
+                console.log("logging successfully")
+                console.log(userInfo.username)
+                console.log(userInfo.email)
+                console.log(userInfo.password)
+                
+                let textElm = document.getElementById("text")
+                textElm.textContent = "Logging successfully"
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <label>username</label><input type="text" id="username" > 
+        <label>email</label><input type="text" id="email">
+        <label>password</label><input type="text" id="password"> 
+    </form>
+    <button onclick="submit()" onchange="updateUsrPW">Submit</button>
+    <div>
+        <p id="text"></p>
+    </div>
+
+    
+</body>
+</html>
