@@ -7,25 +7,43 @@ When the other button is clicked, the text is replaced with, "No, I'm right!" --
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Argue Buttons</title>
+    <link type="text/css" rel="stylesheet" href="./../css/style.css"/>
     <script type="text/javascript">
         function handleClick1(){
             let textElm = document.getElementById("text")
-            textElm.textContent = "I'm right"
+            textElm.textContent = "I'm right!"
+            let text2Elm = document.getElementById("text2")
+            text2Elm.textContent = "..."
+            let content1 = document.getElementsByClassName("content1")[0]
+            content1.style.marginBottom = "200px";
+            let content2 = document.getElementsByClassName("content2")[0]
+            content2.style.marginBottom = "0px";
         }
 
         function handleClick2(){
             let textElm = document.getElementById("text")
-            textElm.textContent = "No, I'm right"
+            textElm.textContent = "..."
+            let text2Elm = document.getElementById("text2")
+            text2Elm.textContent = "No, I'm right!"
+            let content1 = document.getElementsByClassName("content1")[0]
+            content1.style.marginBottom = "-100px";
+            let content2 = document.getElementsByClassName("content2")[0]
+            content2.style.marginBottom = "150px";
         }
 
     </script>
+    
 </head>
 <body>
-    <div class="content">
-        <button onclick="handleClick1()">Button 1</button>
-        <button onclick="handleClick2()">Button 2</button>
-        <p id="text"></p>
-
+    <div class="main-content">
+        <div class="content1">
+            <p id="text">...</p>
+            <button onclick="handleClick1()" class="button1"><img src="./../images/shouting2.png"></button>
+        </div>
+        <div class="content2">
+            <p id="text2">...</p>
+            <button onclick="handleClick2()" class="button2"><img src="./../images/shouting.png"></button>
+        </div>
     </div>
 </body>
 </html>

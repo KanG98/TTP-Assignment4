@@ -7,6 +7,7 @@ When you hover over the element, send an alert to the user that says, "Hey, I to
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="./../css/style.css" />
     <script type="text/javascript">
         window.onload = function(){
             let boxElm = document.getElementById("box")
@@ -17,6 +18,9 @@ When you hover over the element, send an alert to the user that says, "Hey, I to
     </script>
 </head>
 <body>
-    <div id="box" style="height: 200px; width: 200px; background-color: red" >Don't hover over me</div>
+    <div id="box">
+        <img src="./../images/dont-touch.png">
+        <p id="warn">Don't hover over me</p>
+    </div>
 </body>
 </html>
